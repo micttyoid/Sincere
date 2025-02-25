@@ -1,1 +1,1 @@
-# Sincere: A lightweight PDF Viewer component for Blazor
+# Sincere: A lightweight PDF viewer as Blazor component
