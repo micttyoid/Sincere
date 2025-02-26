@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.31903.59
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sincere.Tests", "Sincere.Tests\Sincere.Tests.csproj", "{45AC2FD2-98B2-473C-AB44-E88301C4B241}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sincere", "Sincere\Sincere.csproj", "{B43A6BF5-3059-417D-8B14-59B810C55DAE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Sincere.Unit", "Sincere.Unit\Sincere.Unit.csproj", "{9AAFA177-A136-479E-82F4-7DC78CAC923C}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -14,9 +16,13 @@ Global
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{45AC2FD2-98B2-473C-AB44-E88301C4B241}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{45AC2FD2-98B2-473C-AB44-E88301C4B241}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{45AC2FD2-98B2-473C-AB44-E88301C4B241}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{45AC2FD2-98B2-473C-AB44-E88301C4B241}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B43A6BF5-3059-417D-8B14-59B810C55DAE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B43A6BF5-3059-417D-8B14-59B810C55DAE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B43A6BF5-3059-417D-8B14-59B810C55DAE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B43A6BF5-3059-417D-8B14-59B810C55DAE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9AAFA177-A136-479E-82F4-7DC78CAC923C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9AAFA177-A136-479E-82F4-7DC78CAC923C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9AAFA177-A136-479E-82F4-7DC78CAC923C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9AAFA177-A136-479E-82F4-7DC78CAC923C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

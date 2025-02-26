@@ -1,4 +1,4 @@
-namespace Sincere.Tests;
+namespace Sincere.Unit;
 
 public class UnitTest1
 {
