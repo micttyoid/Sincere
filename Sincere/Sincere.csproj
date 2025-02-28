@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageId>LukeYoo.Blazor.Sincere</PackageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>0.4.0</Version>
+    <Version>0.7.20</Version>
     <Authors>Luke Yoo</Authors>
     <Product>Sincere</Product>
   </PropertyGroup>
