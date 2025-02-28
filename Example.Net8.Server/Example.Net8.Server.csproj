@@ -7,7 +7,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LukeYoo.Blazor.Sincere" Version="0.7.19" />
+    <PackageReference Include="LukeYoo.Blazor.Sincere" Version="0.7.52" />
   </ItemGroup>
 
 </Project>

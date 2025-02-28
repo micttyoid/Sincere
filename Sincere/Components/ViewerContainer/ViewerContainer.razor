@@ -1,0 +1,97 @@
+@namespace Sincere
+@inherits SincereComponentBase
+
+<div class="@ClassNames" style="@StyleNames">
+    @* toolbar *@
+    <div class="d-flex justify-content-between">
+        <div class="d-flex">
+            @* TODO: tooltips separately *@
+            <Icon Name="PrevPage" @onclick="PreviousPageAsync" />
+            <Icon Name="NextPage" @onclick="NextPageAsync" />
+
+            @* https://html.spec.whatwg.org/#the-input-element *@
+            @* TODO: what the benefit using Id indexing in this compact package? *@
+            @* Use so: id="@Id" *@
+            <NumberInput Class="numberinput" TValue="int" Style="width:60px;" Value="@pageNumber"
+                ValueExpression="() => pageNumber" ValueChanged="(value) => PageNumberChangedAsync(value)"
+                Placeholder="Enter page number" />
+            <div>of @pagesCount</div>
+        </div>
+        <div class="d-flex">
+            @* TODO: tooltips *@
+            <Icon Name="ZoomMinus" @onclick="ZoomOutAsync" />
+            <span>@zoomPercentage</span>
+            <Icon Name="ZoomPlus" @onclick="ZoomInAsync" />
+        </div>
+        @* Extra features: rotate, orientation, zoom, ... *@
+        <div class="d-flex">
+            @* <Tooltip Class="me-2" Title="Print" role="button">
+                <Icon Name="IconName.Printer" Size="IconSize.x5" @onclick="PrintAsync" />
+            </Tooltip> *@
+            @* TODO:  This relies on boostrap.js *@
+            @* TODO:  scroll-mode *@
+            <div class="sincere-dropdown d-flex flex-column @(isDropdownActive ? "is-active" : null)">
+                <button @onclick:preventDefault="true" @onclick="toggleDropdown" class="button-md" type="button">
+                    <i type="button" data-bs-toggle="dropdown" aria-expanded="false"></i>
+                    <span>dropdown</span>
+                </button>
+                @* Dropdown list *@
+                <ul class="sincere-dropdown-list" style=@styleDropdownList>
+                    <li><span class="sincere-dropdown-item d-flex" role="button" @onclick="RotateClockwiseAsync">
+                            Rotate Clockwise
+                        </span></li>
+                    <li><span class="sincere-dropdown-item d-flex" role="button" @onclick="RotateCounterclockwiseAsync">
+                            Rotate
+                            Counterclockwise
+                        </span></li>
+                    <li><span class="sincere-dropdown-item d-flex" role="button" @onclick="SwitchOrientationAsync">
+                            Switch Orientation
+                        </span></li>
+                    <li><span class="sincere-dropdown-item d-flex" role="button" @onclick="FirstPageAsync">
+                            Go to First Page
+                        </span></li>
+                    <li><span class="sincere-dropdown-item d-flex" role="button" @onclick="LastPageAsync">
+                            Go to Last Page
+                        </span></li>
+                    <li><span class="sincere-dropdown-item d-flex" role="button" @onclick="ResetZoomAsync">
+                            Reset Zoom
+                        </span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    @* Viewer, coresponds to "viewer" of MDN pdf viewer, where its canvas is inserted *@
+    <div class="text-center">
+        <canvas @ref="@Element" id="@Id" @attributes="@AdditionalAttributes">
+        </canvas>
+    </div>
+</div>
+
+@code {
+    @* TODO: still can use Id in different way? *@
+    private bool isDropdownActive = false;
+    private string styleDropdownList = "visibility: collapse;";
+    //private string styleDropdownList = "display: none;";
+
+    private void showDropdown()
+    {
+        isDropdownActive = true;
+        styleDropdownList = "visibility: visible;";
+        //styleDropdownList = "display: relative;";
+        Console.WriteLine("show!");
+    }
+    private void hideDropdown()
+    {
+        styleDropdownList = "visibility: collapse;";
+        //styleDropdownList = "display: none;";
+        isDropdownActive = false;
+        Console.WriteLine("hide!");
+    }
+
+    private void toggleDropdown()
+    {
+        isDropdownActive = !isDropdownActive;
+        styleDropdownList = isDropdownActive ? "visibility: visible;" : "visibility: collapse;";
+    }
+}

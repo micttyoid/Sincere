@@ -1,0 +1,90 @@
+/* Expect overrides and keep them minimum */
+.d-flex {
+    display: -ms-flexbox;
+    display: flex;
+}
+.flex-column {
+    -ms-flex-direction: column;
+    flex-direction: column;
+}
+
+.m-0 {
+    margin: 0;
+}
+
+.position-static {
+    position: static;
+}
+
+.position-relative {
+    position: relative;
+}
+
+.position-absolute {
+    position: absolute;
+}
+
+.position-fixed {
+    position: fixed;
+}
+
+.position-sticky {
+    position: -webkit-sticky;
+    position: sticky;
+}
+
+.sincere-dropdown-list {
+    /* TODO: other than this margin */
+    margin-top: 2rem;
+    position: absolute;
+    list-style-type: none;
+}
+
+icon[name="PrevPage"],
+[name="NextPage"],
+[name="ZoomMinus"],
+[name="ZoomPlus"],
+[name="ZoomMinus"] ~ span {
+    display: block;
+    border: solid 1px black;
+    width: 20px;
+    height: 20px;
+}
+icon[name="PrevPage"]::before {
+    content: "<";
+}
+icon[name="NextPage"]::before {
+    content: ">";
+}
+
+/* zoom(-) */
+icon[name="ZoomMinus"]::before {
+    content: "-";
+}
+
+icon[name="ZoomMinus"] ~ span {
+    /* zoom display */
+    width: 5rem;
+    color: inherit;
+    /* color: red; */
+}
+/* zoom(+) */
+icon[name="ZoomPlus"]::before {
+    content: "+";
+}
+
+.numberinput {
+    border: solid 1px black;
+}
+
+/* Hide up/down spin buttons: Chrome, Safari, Edge, Opera */
+input.numberinput::-webkit-outer-spin-button,
+input.numberinput::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Hide up/down spin buttons: Firefox */
+input.numberinput[type=number] {
+  -moz-appearance: textfield;
+}

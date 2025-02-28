@@ -1,0 +1,8 @@
+﻿@namespace Sincere
+@inherits SincereComponentBase
+@typeparam TValue
+
+<input @ref="@Element" type="number" id="@Id" class="@ClassNames @fieldCssClasses" style="@StyleNames"
+       value="@GetInvariantNumber(Value)" step="@Step?.ToString(CultureInfo.InvariantCulture)" disabled="@Disabled"
+       placeholder="@Placeholder" autocomplete="@autoComplete" @attributes="@AdditionalAttributes"
+       @onchange="OnChange" />

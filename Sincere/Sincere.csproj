@@ -6,7 +6,7 @@
     <ImplicitUsings>enable</ImplicitUsings>
     <PackageId>LukeYoo.Blazor.Sincere</PackageId>
     <PackageReadmeFile>README.md</PackageReadmeFile>
-    <Version>0.7.20</Version>
+    <Version>0.7.52</Version>
     <Authors>Luke Yoo</Authors>
     <Product>Sincere</Product>
   </PropertyGroup>
@@ -19,9 +19,6 @@
     <None Include="..\nuget\README.md" Pack="true" PackagePath="\"/>
   </ItemGroup>
 
-  <!-- <ItemGroup>
-    <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.12" />
-  </ItemGroup> -->
   <ItemGroup Condition="'$(TargetFramework)' == 'net8.0'">
     <PackageReference Include="Microsoft.AspNetCore.Components.Web" Version="8.0.12" />
   </ItemGroup>  
