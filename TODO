@@ -5,13 +5,15 @@ Things to do for Sincere
 Short term work
 ===============
 
-Example.Net8.Server.UseMudBlazor
+`Example.Net8.Server.UseMudBlazor`
   - Suitable child component(s):
     - MudIconButton of @Icons.Material.Outlined.MoreVert
 
-Standalone Example
+More testings
+  - Component-wise testing
+  - Javascript-side testing
 
-Component-wise testing
+Standalone Example
 
 Fix "fake worker" case of SSR
 
@@ -19,7 +21,7 @@ Release automation
 
 Better CICD
 
-docs
+`docs`
 
 
 ======================
