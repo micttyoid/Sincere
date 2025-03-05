@@ -1,0 +1,36 @@
+Things to do for Sincere
+
+
+===============
+Short term work
+===============
+
+Example.Net8.Server.UseMudBlazor
+  - Suitable child component(s):
+    - MudIconButton of @Icons.Material.Outlined.MoreVert
+
+Standalone Example
+
+Component-wise testing
+
+Fix "fake worker" case of SSR
+
+Release automation
+
+Better CICD
+
+docs
+
+
+======================
+Mini Indexing
+======================
+
+(left blank)
+
+
+==============================================
+Extra security layer against PDF vulnerability
+==============================================
+
+(left blank)
