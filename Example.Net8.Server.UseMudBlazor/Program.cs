@@ -3,6 +3,9 @@ using Example.Net8.Server.UseMudBlazor.Components;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// Add Sincere services
+builder.Services.AddSincere();
+
 // Add MudBlazor services
 builder.Services.AddMudServices();
 
