@@ -1,5 +1,6 @@
 @namespace Sincere
 @inherits SincereComponentBase
+@inject DebugLogger DebugLogger
 
 <div class="@ClassNames" style="@StyleNames">
     @* toolbar *@
@@ -69,6 +70,12 @@
 </div>
 
 @code {
+    [Parameter]
+    public RenderFragment ButtonContent { get; set; }
+
+    [Parameter]
+    public EventCallback OnClick { get; set; }
+
     @* TODO: still can use Id in different way? *@
     private bool isDropdownActive = false;
     private string styleDropdownList = "visibility: collapse;";
@@ -79,14 +86,14 @@
         isDropdownActive = true;
         styleDropdownList = "visibility: visible;";
         //styleDropdownList = "display: relative;";
-        Console.WriteLine("show!");
+        DebugLogger.Log("show");
     }
     private void hideDropdown()
     {
         styleDropdownList = "visibility: collapse;";
         //styleDropdownList = "display: none;";
         isDropdownActive = false;
-        Console.WriteLine("hide!");
+        DebugLogger.Log("hide");
     }
 
     private void toggleDropdown()

@@ -8,3 +8,7 @@ global using System.Globalization; // CultureInfo
 global using System.Linq.Expressions;
 // global using System.Text.Json.Serialization;
 // global using System.Text.RegularExpressions;
+
+#if DEBUG
+global using System.Diagnostics;
+#endif

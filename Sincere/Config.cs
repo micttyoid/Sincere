@@ -6,8 +6,11 @@ public static class Config
 {
     public static IServiceCollection AddSincere(this IServiceCollection services)
     {
-        // TODO: debug-specific service
         services.AddScoped<ViewerContainerJsInterop>();
+
+        // register debug service unconditionally
+        services.AddSingleton<DebugLogger>();
+
         return services;
     }
 }
