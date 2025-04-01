@@ -7,9 +7,15 @@
 Welcome to your new app.
 <p>@eventLog</p>
 
-@* Behave as a drop-in replacement of Bootstrap: https://demos.blazorbootstrap.com/pdf-viewer *@
-<ViewerContainer Url="https://raw.githubusercontent.com/mozilla/pdf.js/ba2edeae/web/compressed.tracemonkey-pldi-09.pdf"
-    Orientation="Orientation.Portrait" OnDocumentLoaded="OnDocumentLoaded" OnPageChanged="OnPageChanged" />
+@* Behave as a drop-in replacement of Bootstrap: https://demos.blazorbootstrap.com/pdf-viewer
+ * except the name because viewer element(MDN) is within on browser
+*@
+<ViewerContainer
+    Url="https://raw.githubusercontent.com/micttyoid/micttyoid.github.io/refs/heads/main/static/docs/pdf32000_2008.pdf"
+    Orientation="Orientation.Portrait"
+    OnDocumentLoaded="OnDocumentLoaded"
+    OnPageChanged="OnPageChanged"
+/>
 
 @code {
     private string eventLog { get; set; } = $"Last event: ..., CurrentPage: 0, TotalPages: 0";

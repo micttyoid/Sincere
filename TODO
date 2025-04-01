@@ -1,40 +1,45 @@
 Things to do for Sincere
 
-
+
 ===============
 Short term work
 ===============
 
-`Example.Net8.Server.UseMudBlazor`
+* HTML-wise Generic
+  - Direct HTML Elements: `@attributes`
+  - UI-library Element: possibly through `DynamicComponent`
+
+* `Example.Net8.Server.UseMudBlazor`
   - Suitable child component(s):
     - MudIconButton of @Icons.Material.Outlined.MoreVert
 
-Debug Mode
+* Debug Mode
 
-Net9 Support
+* Net9 Support
 
-More testings
+* More testings
   - Component-wise testing
   - Javascript-side testing
 
-Standalone Example
+* Standalone Example
 
-Fix "fake worker" case of SSR
+* Fix "fake worker" case of SSR
 
-Release automation
+* Release automation
 
-Better CICD
+* Better CICD
 
-`docs`
+* `docs`
 
-
+
+
 ======================
 Mini Indexing
 ======================
 
 (left blank)
 
-
+
 ==============================================
 Extra security layer against PDF vulnerability
 ==============================================

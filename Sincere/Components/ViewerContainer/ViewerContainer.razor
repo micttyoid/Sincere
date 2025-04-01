@@ -7,22 +7,40 @@
     <div class="d-flex justify-content-between">
         <div class="d-flex">
             @* TODO: tooltips separately *@
-            <Icon Name="PrevPage" @onclick="PreviousPageAsync" />
-            <Icon Name="NextPage" @onclick="NextPageAsync" />
+            <Icon
+                Name="PrevPage"
+                @onclick="PreviousPageAsync"
+            />
+            <Icon
+                Name="NextPage"
+                @onclick="NextPageAsync"
+            />
 
             @* https://html.spec.whatwg.org/#the-input-element *@
             @* TODO: what the benefit using Id indexing in this compact package? *@
             @* Use so: id="@Id" *@
-            <NumberInput Class="numberinput" TValue="int" Style="width:60px;" Value="@pageNumber"
-                ValueExpression="() => pageNumber" ValueChanged="(value) => PageNumberChangedAsync(value)"
-                Placeholder="Enter page number" />
+            <NumberInput
+                Class="numberinput"
+                TValue="int"
+                Style="width:60px;"
+                Value="@pageNumber"
+                ValueExpression="() => pageNumber"
+                ValueChanged="(value) => PageNumberChangedAsync(value)"
+                Placeholder="Enter page number"
+            />
             <div>of @pagesCount</div>
         </div>
         <div class="d-flex">
-            @* TODO: tooltips *@
-            <Icon Name="ZoomMinus" @onclick="ZoomOutAsync" />
+            @* TODO: tooltips, let it override if UI library comes in *@
+            <Icon
+                Name="ZoomMinus"
+                @onclick="ZoomOutAsync"
+            />
             <span>@zoomPercentage</span>
-            <Icon Name="ZoomPlus" @onclick="ZoomInAsync" />
+            <Icon
+                Name="ZoomPlus"
+                @onclick="ZoomInAsync"
+            />
         </div>
         @* Extra features: rotate, orientation, zoom, ... *@
         <div class="d-flex">
