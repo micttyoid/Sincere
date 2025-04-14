@@ -18,10 +18,10 @@ jobs:
         with:
           dotnet-version: 8.0.x
       - name: Restore dependencies
-        run: dotnet restore
+        run: dotnet restore sincere.sln
       - name: Build
-        run: dotnet build ./Sincere --no-restore
+        run: dotnet build ./Sincere --no-restore sincere.sln
       - name: Pack
-        run: dotnet pack ./Sincere --no-restore
+        run: dotnet pack ./Sincere --no-restore sincere.sln
       - name: Test
-        run: dotnet test --verbosity normal
+        run: dotnet test --verbosity normal sincere.sln
